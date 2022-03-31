@@ -1,15 +1,16 @@
 {
-    "id": "my_plugin",
+    "id": "minecraft_version_api",
     "version": "1.0.0",
-    "name": "My Plugin",
+    "name": "Minecraft Version API",
     "description": "This description is a description to your plugin",
     "author": [
-        "You"
+        "Ivan1F"
     ],
-    "link": "https://github.com/MCDReforged/MCDReforged-PluginTemplate",
+    "link": "https://github.com/Ivan-1F/MinecraftVersionAPI",
     "dependencies": {
+        "mcdreforged": ">=2.0.0"
     },
-
+    "entrypoint": "minecraft_version_api.entry",
     "resources": [
         "lang"
     ]
