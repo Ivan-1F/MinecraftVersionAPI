@@ -124,7 +124,7 @@ def normalize_pre_release_version(version: str):
         return None
     release = result.group(1)
     pre = result.group(2)
-    return '{}-pre.{}'.format(release, pre)
+    return '{}-pre{}'.format(release, pre)
 
 
 def normalize_release_candidate_version(version: str):
@@ -133,7 +133,7 @@ def normalize_release_candidate_version(version: str):
         return None
     release = result.group(1)
     pre = result.group(2)
-    return '{}-rc.{}'.format(release, pre)
+    return '{}-rc{}'.format(release, pre)
 
 
 def normalize_experimental_snapshot_version(version: str):
@@ -142,7 +142,7 @@ def normalize_experimental_snapshot_version(version: str):
         return None
     release = result.group(1)
     pre = result.group(2)
-    return '{}-experimental.{}'.format(release, pre)
+    return '{}-experimental{}'.format(release, pre)
 
 
 if __name__ == '__main__':
