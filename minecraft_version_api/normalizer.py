@@ -6,10 +6,6 @@ import re
 
 
 def normalize(version: str) -> str:
-    # Special Version
-    # Snapshot 22w11a -> 1.19-snapshot.22.11
-    # Experience Snapshot
-    # Release
     if normalize_special_version(version) is not None:
         return normalize_special_version(version)
     if normalize_snapshot_version(version) is not None:
