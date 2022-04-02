@@ -1,8 +1,9 @@
-from typing import Optional
+from typing import Optional, Tuple
 
 from mcdreforged.api.all import *
 from parse import parse
 
+from minecraft_version_api import normalizer
 
 version: Optional[str] = None
 
@@ -23,9 +24,12 @@ def on_load(server: PluginServerInterface, old):
 
 
 # API
-def get_minecraft_version() -> Optional[str]:
+def get_minecraft_version() -> Optional[Tuple[str, str]]:
     """
     Get the version of the minecraft server
     :return:
     """
-    return version
+    if version is None:
+        return None
+    return version, normalizer.normalize(version)
+
