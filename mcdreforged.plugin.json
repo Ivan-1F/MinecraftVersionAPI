@@ -2,7 +2,10 @@
     "id": "minecraft_version_api",
     "version": "1.0.0",
     "name": "Minecraft Version API",
-    "description": "This description is a description to your plugin",
+    "description": {
+        "en_us": "A api plugin to get the Minecraft server version",
+        "zh_cn": "一个用于获取 Minecraft 服务端版本的 API 插件"
+    },
     "author": [
         "Ivan1F"
     ],
@@ -10,8 +13,5 @@
     "dependencies": {
         "mcdreforged": ">=2.0.0"
     },
-    "entrypoint": "minecraft_version_api.entry",
-    "resources": [
-        "lang"
-    ]
+    "entrypoint": "minecraft_version_api.entry"
 }

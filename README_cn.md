@@ -1,7 +1,7 @@
 Minecraft Version API
 -----
 
-一个用于获取 Minecraft 服务端版本的 MCDReforged 插件
+一个用于获取 Minecraft 服务端版本的 MCDReforged API 插件
 
 包含一个简单的版本格式化器来将 Minecraft 版本格式化为类语义化版本（灵感来自 Fabric Loader）
 
