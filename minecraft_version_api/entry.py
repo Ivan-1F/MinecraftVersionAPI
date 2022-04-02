@@ -27,7 +27,7 @@ def on_load(server: PluginServerInterface, old):
 def get_minecraft_version() -> Optional[Tuple[str, str]]:
     """
     Get the version of the minecraft server
-    :return:
+    :return: a tuple contains the raw version name and the normalized version
     """
     if version is None:
         return None
