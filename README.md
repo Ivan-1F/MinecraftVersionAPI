@@ -5,6 +5,8 @@ A MCDReforged api plugin to get the Minecraft server version
 
 Includes a simple version normalizer to normalize Minecraft versions to semver styled versions (inspired by Fabric Loader)
 
+The normalized version can be parsed by the `Version` class of MCDR
+
 **Warning**: This plugin is only tested on vanilla servers with common versions. If you find any capability issue with other server core, please [open an issue](https://github.com/Ivan-1F/MinecraftVersionAPI/issues/new)
 
 ## How it works
@@ -43,6 +45,6 @@ def get_minecraft_version() -> Optional[Tuple[str, str]]
 
 Get the Minecraft server version
 
-Returns a tuple contains the raw version name and the normalized version
+Returns a tuple contains the raw version name and the normalized version, or None if the plugin failed to fetch the version
 
 Example: `('22w13a', '1.19-snapshot.22.13.a')`
