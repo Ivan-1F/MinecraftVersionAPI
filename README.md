@@ -1,6 +1,8 @@
 Minecraft Version API
 -----
 
+**English** | [中文](./README_cn.md)
+
 A MCDReforged api plugin to get the Minecraft server version
 
 Includes a simple version normalizer to normalize Minecraft versions to semver styled versions (inspired by Fabric Loader)
