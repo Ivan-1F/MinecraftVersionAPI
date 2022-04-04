@@ -51,8 +51,10 @@ def normalize_special_version(version: str):
 
 def normalize_snapshot_version(version: str):
     def get_snapshot_release(year: int, week: int):
-        if year == 22:
+        if year == 22 and week >= 11:
             return '1.19'
+        elif year == 22 and 3 <= week <= 7:
+            return '1.18.2'
         elif year == 21 and 37 <= week <= 44:
             return '1.18'
         elif year == 20 and 45 <= week <= 51 or year == 21 and 5 <= week <= 18:
