@@ -23,13 +23,22 @@ def on_load(server: PluginServerInterface, old):
         version = old.version
 
 
+def get_mcdr_parsed_minecraft_version() -> Optional[str]:
+    try:
+        return ServerInterface.get_instance().get_server_information().version
+    except NameError:
+        # MCDR 2.1-
+        return None
+
+
 # API
 def get_minecraft_version() -> Optional[Tuple[str, str]]:
     """
     Get the version of the minecraft server
     :return: a tuple contains the raw version name and the normalized version, or None if the plugin failed to fetch the version
     """
-    if version is None:
+    fetched_version = version or get_mcdr_parsed_minecraft_version()
+    if fetched_version is None:
         return None
     return version, normalizer.normalize(version)
 
