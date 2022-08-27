@@ -1,2 +1,2 @@
 # Add your python package requirements here, just like regular requirements.txt
-parse~=1.19.0
+parse
